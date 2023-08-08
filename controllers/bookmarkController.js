@@ -1,5 +1,6 @@
 const Bookmark = require("../models/Bookmark");
-const Job = require(".../models/job"); 
+const Job = require("../models/Job"); 
+
 module.exports = {
     createBookmark:async(req,res) =>{
         const jobID = req.body.job;
