@@ -23,5 +23,5 @@ app.use("/api/job",jobRoute);
 app.use("/api/bookmarks",bookMarkRoute);
 // localhost:3000/api/register
 
-app.get('/', (req, res) => res.send('Hello dihan!'))
+app.get('/', (req, res) => res.send(`Hello dihan ${process.env.MONGO_URL} `))
 app.listen(process.env.PORT||5002,  console.log(`Example app listening on port!`))
