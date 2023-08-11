@@ -16,10 +16,11 @@ module.exports = {
                 $set:req.body
             },{new:true}
         );
-        const {password,__v, createdAt,...others} = this.updateUser._doc;
+        const {password,__v, createdAt,...others} = UpdateUser._doc;
+
         res.status(200).json(others);
     }catch(error){
-        res.status(500).json(error);
+        res.status(500).json({ error: error.message });
     }
     },
 
