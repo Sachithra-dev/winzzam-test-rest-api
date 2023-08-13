@@ -2,11 +2,14 @@ const mongoose = require("mongoose");
 
 const BookMarkSchema = new mongoose.Schema(
     {
-        job:{
+        Month:{
             type:mongoose.Schema.Types.ObjectId,
-            ref:"Job"
+            ref:"Month"
         },
-        userId: {type:String,required:true},
+        userId:{
+            type:mongoose.Schema.Types.ObjectId,
+            ref:"User"
+        },
         
         
     },{timestamps:true}

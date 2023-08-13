@@ -3,7 +3,6 @@ const Cryptojs = require('crypto-js');
 const jwt = require('jsonwebtoken');
 
 module.exports = {
-
         createUser: async (req, res) => {
             const encryptedPassword = Cryptojs.AES.encrypt(req.body.password, process.env.SECRET).toString();
             const newUser = new User({

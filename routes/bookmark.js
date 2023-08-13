@@ -1,19 +1,19 @@
-const router = require("express").Router();
-const bookmarkController = require("../controllers/bookmarkController");
-const {verifyAndAuthorization,verifyToken,verifyAndAdmin} = require("../middleware/verifyToken")
+// const router = require("express").Router();
+// const bookmarkController = require("../controllers/bookmarkController");
+// const {verifyAndAuthorization,verifyToken} = require("../middleware/verifyToken")
 
-// CREATE BOOKMARKS
-router.post("/",verifyAndAuthorization ,bookmarkController.createBookmark);
-
-
-// DELETE BOOKMARKS
-
-router.delete("/:id", verifyToken, bookmarkController.deleteBookmark);
+// // CREATE BOOKMARKS
+// router.post("/",verifyAndAuthorization ,bookmarkController.createBookmark);
 
 
-// GET BOOKMARKS
-router.get("/:userId", bookmarkController.getBookmarks);
+// // DELETE BOOKMARKS
+
+// router.delete("/:id", verifyToken , verifyByRole('admin') , bookmarkController.deleteBookmark);
+
+
+// // GET BOOKMARKS
+// router.get("/:userId", bookmarkController.getBookmarks);
 
 
 
-module.exports = router
+// module.exports = router
