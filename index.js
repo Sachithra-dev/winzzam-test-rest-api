@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const authRoute = require("./routes/auth");
 const userRoute = require("./routes/user");
 const monthRoute = require("./routes/month");
+const studentPaymentRoute = require("./routes/studentPaymentRoute");
 
 
 
@@ -20,6 +21,7 @@ app.use(express.json());
 app.use("/api/",authRoute);
 app.use("/api/users",userRoute);
 app.use("/api/month",monthRoute);
+app.use('/api/pay', studentPaymentRoute);
 
 
 
